@@ -1,4 +1,4 @@
----- GUI Enhanced by TEAM BOMBS HACK
+-- GUI Enhanced by TEAM BOMBS HACK
 -- Includes multiple scripts with proper credits
 -- For Roblox (works on mobile)
 
@@ -44,7 +44,7 @@ Title.Size = UDim2.new(0.78, 0, 1, 0)
 Title.Position = UDim2.new(0.02, 0, 0, 0)
 Title.BackgroundTransparency = 1
 Title.Font = Enum.Font.GothamBold
-Title.Text = "من صنع علاوي المطور"
+Title.Text = "من صنع المطور علاوي "
 Title.TextColor3 = Color3.fromRGB(235, 235, 245)
 Title.TextSize = 20
 Title.TextXAlignment = Enum.TextXAlignment.Left
@@ -152,30 +152,52 @@ Footer.TextColor3 = Color3.fromRGB(160, 140, 255)
 Footer.TextXAlignment = Enum.TextXAlignment.Center
 Footer.Parent = Frame
 
--- Drag functionality
-local dragging, dragInput, dragStart, startPos
+-- Drag functionality (Supports PC + Mobile)
+local dragging = false
+local dragInput, dragStart, startPos
+
 local function update(input)
-    local delta=input.Position-dragStart
-    Frame.Position=UDim2.new(startPos.X.Scale,startPos.X.Offset+delta.X,startPos.Y.Scale,startPos.Y.Offset+delta.Y)
+    local delta = input.Position - dragStart
+    Frame.Position = UDim2.new(
+        startPos.X.Scale,
+        startPos.X.Offset + delta.X,
+        startPos.Y.Scale,
+        startPos.Y.Offset + delta.Y
+    )
 end
+
 TopBar.InputBegan:Connect(function(input)
-    if input.UserInputType==Enum.UserInputType.MouseButton1 then
-        dragging=true
-        dragStart=input.Position
-        startPos=Frame.Position
+    if input.UserInputType == Enum.UserInputType.MouseButton1 
+    or input.UserInputType == Enum.UserInputType.Touch then
+        dragging = true
+        dragStart = input.Position
+        startPos = Frame.Position
+
         input.Changed:Connect(function()
-            if input.UserInputState==Enum.UserInputState.End then dragging=false end
+            if input.UserInputState == Enum.UserInputState.End then
+                dragging = false
+            end
         end)
     end
 end)
+
 TopBar.InputChanged:Connect(function(input)
-    if input.UserInputType==Enum.UserInputType.MouseMovement then dragInput=input end
+    if input.UserInputType == Enum.UserInputType.MouseMovement 
+    or input.UserInputType == Enum.UserInputType.Touch then
+        dragInput = input
+    end
 end)
+
 UserInputService.InputChanged:Connect(function(input)
-    if input==dragInput and dragging then update(input) end
+    if input == dragInput and dragging then
+        update(input)
+    end
 end)
 
 -- Adjust canvas size
-spawn(function() wait(0.2) ScrollingFrame.CanvasSize=UDim2.new(0,0,0,UIGridLayout.AbsoluteContentSize.Y+12) end)
+spawn(function()
+    wait(0.2)
+    ScrollingFrame.CanvasSize = UDim2.new(0,0,0,UIGridLayout.AbsoluteContentSize.Y+12)
+end)
 
 print("Team Bombs GUI loaded")
