@@ -1,0 +1,181 @@
+---- GUI Enhanced by TEAM BOMBS HACK
+-- Includes multiple scripts with proper credits
+-- For Roblox (works on mobile)
+
+local Players = game:GetService("Players")
+local UserInputService = game:GetService("UserInputService")
+local LocalPlayer = Players.LocalPlayer
+local PlayerGui = LocalPlayer:WaitForChild("PlayerGui")
+
+-- Root
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.Name = "TeamBombsHub"
+ScreenGui.Parent = PlayerGui
+ScreenGui.ResetOnSpawn = false
+
+-- Main frame
+local Frame = Instance.new("Frame")
+Frame.Name = "MainFrame"
+Frame.Size = UDim2.new(0, 380, 0, 320)
+Frame.Position = UDim2.new(0.3, 0, 0.25, 0)
+Frame.BackgroundColor3 = Color3.fromRGB(38, 24, 64)
+Frame.BorderSizePixel = 0
+Frame.Active = true
+Frame.Parent = ScreenGui
+
+local FrameCorner = Instance.new("UICorner", Frame)
+FrameCorner.CornerRadius = UDim.new(0, 12)
+local FrameStroke = Instance.new("UIStroke", Frame)
+FrameStroke.Thickness = 2
+FrameStroke.Transparency = 0.7
+FrameStroke.Color = Color3.fromRGB(125, 102, 255)
+
+-- Top Bar
+local TopBar = Instance.new("Frame")
+TopBar.Name = "TopBar"
+TopBar.Size = UDim2.new(1, 0, 0, 44)
+TopBar.Position = UDim2.new(0, 0, 0, 0)
+TopBar.BackgroundTransparency = 1
+TopBar.Parent = Frame
+
+local Title = Instance.new("TextLabel")
+Title.Name = "Title"
+Title.Size = UDim2.new(0.78, 0, 1, 0)
+Title.Position = UDim2.new(0.02, 0, 0, 0)
+Title.BackgroundTransparency = 1
+Title.Font = Enum.Font.GothamBold
+Title.Text = "HACK is here"
+Title.TextColor3 = Color3.fromRGB(235, 235, 245)
+Title.TextSize = 20
+Title.TextXAlignment = Enum.TextXAlignment.Left
+Title.Parent = TopBar
+
+local Credit = Instance.new("TextLabel")
+Credit.Name = "Credit"
+Credit.Size = UDim2.new(0.18, -8, 1, -8)
+Credit.Position = UDim2.new(0.82, 0, 0, 4)
+Credit.BackgroundTransparency = 1
+Credit.Font = Enum.Font.GothamBlack
+Credit.Text = "BY TEAM BOMBS HACK & مطور مجهول"
+Credit.TextColor3 = Color3.fromRGB(175, 155, 255)
+Credit.TextSize = 10
+Credit.TextScaled = true
+Credit.Parent = TopBar
+
+local CloseBtn = Instance.new("TextButton")
+CloseBtn.Name = "Close"
+CloseBtn.Size = UDim2.new(0, 36, 0, 28)
+CloseBtn.Position = UDim2.new(0.94, -36, 0.06, 0)
+CloseBtn.BackgroundColor3 = Color3.fromRGB(125, 102, 255)
+CloseBtn.Font = Enum.Font.GothamBold
+CloseBtn.Text = "X"
+CloseBtn.TextColor3 = Color3.fromRGB(0,0,0)
+CloseBtn.Parent = TopBar
+local CloseCorner = Instance.new("UICorner", CloseBtn)
+CloseCorner.CornerRadius = UDim.new(0,8)
+local CloseStroke = Instance.new("UIStroke", CloseBtn)
+CloseStroke.Color = Color3.fromRGB(45,20,80)
+CloseStroke.Thickness = 1
+
+CloseBtn.MouseButton1Click:Connect(function()
+    Frame.Visible = false
+end)
+
+-- Scrolling content
+local ScrollingFrame = Instance.new("ScrollingFrame")
+ScrollingFrame.Name = "Buttons"
+ScrollingFrame.Position = UDim2.new(0.02, 0, 0.14, 0)
+ScrollingFrame.Size = UDim2.new(0.96, 0, 0.78, 0)
+ScrollingFrame.CanvasSize = UDim2.new(0, 0, 0, 0)
+ScrollingFrame.ScrollBarThickness = 6
+ScrollingFrame.BackgroundTransparency = 1
+ScrollingFrame.Parent = Frame
+
+local UIGridLayout = Instance.new("UIGridLayout")
+UIGridLayout.Parent = ScrollingFrame
+UIGridLayout.CellSize = UDim2.new(0, 110, 0, 40)
+UIGridLayout.CellPadding = UDim2.new(0, 8, 0, 8)
+UIGridLayout.FillDirection = Enum.FillDirection.Horizontal
+
+-- Helper to create styled buttons
+local function CreateButton(text, parent, callback)
+    local btn = Instance.new("TextButton")
+    btn.Size = UDim2.new(0, 110, 0, 40)
+    btn.BackgroundColor3 = Color3.fromRGB(125, 102, 255)
+    btn.BorderSizePixel = 0
+    btn.Font = Enum.Font.GothamSemibold
+    btn.Text = text
+    btn.TextColor3 = Color3.fromRGB(12,12,12)
+    btn.TextSize = 16
+    btn.Parent = parent
+    local c = Instance.new("UICorner", btn)
+    c.CornerRadius = UDim.new(0, 8)
+    local s = Instance.new("UIStroke", btn)
+    s.Color = Color3.fromRGB(38, 24, 64)
+    s.Thickness = 1
+    btn.MouseButton1Click:Connect(callback)
+    return btn
+end
+
+-- All scripts list
+local scriptsList = {
+    {Name="اختفاء", Callback=function() loadstring(game:HttpGet("https://raw.githubusercontent.com/GhostPlayer352/Test4/main/Invisible%20Gui"))() end},
+    {Name="رقصات", Callback=function() loadstring(game:HttpGet("https://yarhm.mhi.im/scr?channel=afem"))() end},
+    {Name="ادمن", Callback=function() loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))() end},
+    {Name="مشيات", Callback=function() loadstring(game:HttpGet("https://raw.githubusercontent.com/GamingScripter/Animation-Hub/main/Animation%20Gui", true))() end},
+    {Name="ايم بوت", Callback=function() _G.HeadSize=30 _G.Disabled=true game:GetService('RunService').RenderStepped:Connect(function() if _G.Disabled then for i,v in next, game:GetService('Players'):GetPlayers() do if v.Name~=game.Players.LocalPlayer.Name then pcall(function() v.Character.HumanoidRootPart.Size=Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize) v.Character.HumanoidRootPart.Transparency=0.7 v.Character.HumanoidRootPart.BrickColor=BrickColor.new("Really black") v.Character.HumanoidRootPart.Material="Neon" v.Character.HumanoidRootPart.CanCollide=false end) end end end end) end},
+    {Name="hitbox", Callback=function() _G.HeadSize=10 _G.Disabled=true game:GetService('RunService').RenderStepped:Connect(function() if _G.Disabled then for i,v in next, game:GetService('Players'):GetPlayers() do if v.Name~=game.Players.LocalPlayer.Name then pcall(function() v.Character.HumanoidRootPart.Size=Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize) v.Character.HumanoidRootPart.Transparency=0.7 v.Character.HumanoidRootPart.BrickColor=BrickColor.new("Really blue") v.Character.HumanoidRootPart.Material="Neon" v.Character.HumanoidRootPart.CanCollide=false end) end end end end) end},
+    {Name="سرعه", Callback=function() loadstring(game:HttpGet("https://pastebin.com/raw/WPnVHAtc"))() end},
+    {Name="Esp", Callback=function() local FillColor=Color3.fromRGB(175,25,255) local DepthMode="AlwaysOnTop" local FillTransparency=0.5 local OutlineColor=Color3.fromRGB(255,255,255) local Storage=Instance.new("Folder") Storage.Name="Highlight_Storage" Storage.Parent=game:GetService("CoreGui") local connections={} local Players=game:GetService("Players") local function Highlight(plr) local Highlight=Instance.new("Highlight") Highlight.Name=plr.Name Highlight.FillColor=FillColor Highlight.DepthMode=DepthMode Highlight.FillTransparency=FillTransparency Highlight.OutlineColor=OutlineColor Highlight.OutlineTransparency=0 Highlight.Parent=Storage local plrchar=plr.Character if plrchar then Highlight.Adornee=plrchar end connections[plr]=plr.CharacterAdded:Connect(function(char) Highlight.Adornee=char end) end Players.PlayerAdded:Connect(Highlight) for i,v in next, Players:GetPlayers() do Highlight(v) end Players.PlayerRemoving:Connect(function(plr) if Storage:FindFirstChild(plr.Name) then Storage[plr.Name]:Destroy() end if connections[plr] then connections[plr]:Disconnect() end end) end},
+    {Name="مشي فلهواء", Callback=function() loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/Float'))() end},
+    {Name="مراقبة الناس", Callback=function() loadstring(game:HttpGet('https://pastebin.com/raw/wyvdb7gr'))() end},
+    {Name="اغاني", Callback=function() loadstring(game:HttpGet('https://raw.githubusercontent.com/harisprofanny/d/main/Music%20Gui.txt'))() end},
+    {Name="قفل", Callback=function() loadstring(game:HttpGet('https://raw.githubusercontent.com/Sector9922/SECTOR-SHIFT-LOCK/main/SECTOR%20SHIFT%20LOCK'))() end},
+    {Name="ماب القنبله", Callback=function() loadstring(game:HttpGet('https://rawscripts.net/raw/Universal-Script-TvonHub-40198'))() end},
+    {Name="طيران", Callback=function() loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-andx1F3E1RP-Fly-Gui-15924"))() end},
+}
+
+-- Create buttons
+for _,v in pairs(scriptsList) do
+    CreateButton(v.Name, ScrollingFrame, v.Callback)
+end
+
+-- Footer credit
+local Footer = Instance.new("TextLabel")
+Footer.Size = UDim2.new(1, 0, 0, 24)
+Footer.Position = UDim2.new(0, 0, 1, -26)
+Footer.BackgroundTransparency = 1
+Footer.Font = Enum.Font.Gotham
+Footer.TextSize = 12
+Footer.Text = "BY TEAM BOMBS HACK & مطور مجهول"
+Footer.TextColor3 = Color3.fromRGB(160, 140, 255)
+Footer.TextXAlignment = Enum.TextXAlignment.Center
+Footer.Parent = Frame
+
+-- Drag functionality
+local dragging, dragInput, dragStart, startPos
+local function update(input)
+    local delta=input.Position-dragStart
+    Frame.Position=UDim2.new(startPos.X.Scale,startPos.X.Offset+delta.X,startPos.Y.Scale,startPos.Y.Offset+delta.Y)
+end
+TopBar.InputBegan:Connect(function(input)
+    if input.UserInputType==Enum.UserInputType.MouseButton1 then
+        dragging=true
+        dragStart=input.Position
+        startPos=Frame.Position
+        input.Changed:Connect(function()
+            if input.UserInputState==Enum.UserInputState.End then dragging=false end
+        end)
+    end
+end)
+TopBar.InputChanged:Connect(function(input)
+    if input.UserInputType==Enum.UserInputType.MouseMovement then dragInput=input end
+end)
+UserInputService.InputChanged:Connect(function(input)
+    if input==dragInput and dragging then update(input) end
+end)
+
+-- Adjust canvas size
+spawn(function() wait(0.2) ScrollingFrame.CanvasSize=UDim2.new(0,0,0,UIGridLayout.AbsoluteContentSize.Y+12) end)
+
+print("Team Bombs GUI loaded")
