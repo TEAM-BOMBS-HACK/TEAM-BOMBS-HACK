@@ -131,7 +131,7 @@ local scriptsList = {
     {Name="اغاني", Callback=function() loadstring(game:HttpGet('https://raw.githubusercontent.com/harisprofanny/d/main/Music%20Gui.txt'))() end},
     {Name="قفل", Callback=function() loadstring(game:HttpGet('https://raw.githubusercontent.com/Sector9922/SECTOR-SHIFT-LOCK/main/SECTOR%20SHIFT%20LOCK'))() end},
     {Name="ماب القنبله", Callback=function() loadstring(game:HttpGet('https://rawscripts.net/raw/Universal-Script-TvonHub-40198'))() end},
-    {Name="طيران", Callback=function() loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-andx1F3E1RP-Fly-Gui-15924"))() end},
+    {Name="طيران", Callback=function() loadstring(game:HttpGet("https://pastebin.com/raw/jHX4wsCr"))() end},
 }
 
 -- Create buttons
