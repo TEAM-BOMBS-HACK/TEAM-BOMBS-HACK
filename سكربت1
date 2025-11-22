@@ -120,7 +120,7 @@ end
 -- All scripts list
 local scriptsList = {
     {Name="اختفاء", Callback=function() loadstring(game:HttpGet("https://raw.githubusercontent.com/GhostPlayer352/Test4/main/Invisible%20Gui"))() end},
-    {Name="سحب ادوات ", Callback=function() loadstring(game:HttpGet('https://pastebin.com/xisndMix'))() end},
+    {Name="سحب ادوات ", Callback=function() loadstring(game:HttpGet('https://pastebin.com/raw/xisndMix'))() end},
     {Name="ادمن", Callback=function() loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))() end},
     {Name="RC7", Callback=function() loadstring(game:HttpGet('https://pastebin.com/raw/iRe4j9iz'))() end},
     {Name="ماب القنبله", Callback=function() loadstring(game:HttpGet('https://pastebin.com/raw/As6PV5C5'))() end},
