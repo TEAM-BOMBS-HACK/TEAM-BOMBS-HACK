@@ -128,7 +128,7 @@ local scriptsList = {
     {Name="مشخل سكربت", Callback=function() loadstring(game:HttpGet("https://pastebin.com/raw/Cx7f4KuC"))() end},
     {Name="نسخ", Callback=function() loadstring(game:HttpGet("https://pastebin.com/raw/SnBYMp1n"))() end},
     {Name="قفل", Callback=function() loadstring(game:HttpGet('https://raw.githubusercontent.com/Sector9922/SECTOR-SHIFT-LOCK/main/SECTOR%20SHIFT%20LOCK'))() end},
-    {Name="طيران", Callback=function() loadstring(game:HttpGet("https://pastebin.com/LdwPiyV2"))() end},
+    {Name="AimBot", Callback=function() loadstring(game:HttpGet("https://pastebin.com/raw/KN8sfYJG"))() end},
 }
 
 -- Create buttons
