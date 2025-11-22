@@ -123,13 +123,12 @@ local scriptsList = {
     {Name="سحب ادوات ", Callback=function() loadstring(game:HttpGet('https://pastebin.com/raw/xisndMix'))() end},
     {Name="ادمن", Callback=function() loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))() end},
     {Name="RC7", Callback=function() loadstring(game:HttpGet('https://pastebin.com/raw/iRe4j9iz'))() end},
-    {Name="ماب القنبله", Callback=function() loadstring(game:HttpGet('https://pastebin.com/raw/As6PV5C5'))() end},
+    {Name="ماب القنبله", Callback=function() loadstring(game:HttpGet(''))() end},
     {Name="سرعه", Callback=function() loadstring(game:HttpGet("https://pastebin.com/raw/WPnVHAtc"))() end},
     {Name="مشخل سكربت", Callback=function() loadstring(game:HttpGet('https://pastebin.com/raw/Cx7f4KuC'))() end},
     {Name="نسخ", Callback=function() loadstring(game:HttpGet('https://pastebin.com/raw/SnBYMp1n'))() end},
     {Name="قفل", Callback=function() loadstring(game:HttpGet('https://raw.githubusercontent.com/Sector9922/SECTOR-SHIFT-LOCK/main/SECTOR%20SHIFT%20LOCK'))() end},
-    {Name="AimBot", Callback=function() loadstring(game:HttpGet('https://pastebin.com/raw/KN8sfYJG'))() end},
-    {Name="سكربت تخريب علاوي ", Callback=function() loadstring(game:HttpGet("https://raw.github.com/TEAM-BOMBS-HACK/-/blob/main/%D8%A7%D8%AD%D8%A8%D9%83"))() end},
+    {Name="AimBot", Callback=function() loadstring(game:HttpGet(''))() end},
 }
 
 -- Create buttons
