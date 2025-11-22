@@ -123,13 +123,12 @@ local scriptsList = {
     {Name="رقصات", Callback=function() loadstring(game:HttpGet("https://yarhm.mhi.im/scr?channel=afem"))() end},
     {Name="ادمن", Callback=function() loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))() end},
     {Name="RC7", Callback=function() loadstring(game:HttpGet("https://pastebin.com/raw/iRe4j9iz"))() end},
-    {Name="سرعه", Callback=function() loadstring(game:HttpGet("https://pastebin.com/raw/WPnVHAtc"))() end},
+    {Name="ماب القنبله", Callback=function() loadstring(game:HttpGet("https://pastebin.com/raw/As6PV5C5"))() end},
     {Name="سرعه", Callback=function() loadstring(game:HttpGet("https://pastebin.com/raw/WPnVHAtc"))() end},
     {Name="مشخل سكربت", Callback=function() loadstring(game:HttpGet("https://pastebin.com/raw/Cx7f4KuC"))() end},
     {Name="مراقبة الناس", Callback=function() loadstring(game:HttpGet('https://pastebin.com/raw/wyvdb7gr'))() end},
     {Name="اغاني", Callback=function() loadstring(game:HttpGet('https://raw.githubusercontent.com/harisprofanny/d/main/Music%20Gui.txt'))() end},
     {Name="قفل", Callback=function() loadstring(game:HttpGet('https://raw.githubusercontent.com/Sector9922/SECTOR-SHIFT-LOCK/main/SECTOR%20SHIFT%20LOCK'))() end},
-    {Name="ماب القنبله", Callback=function() loadstring(game:HttpGet('https://rawscripts.net/raw/Universal-Script-TvonHub-40198'))() end},
     {Name="طيران", Callback=function() loadstring(game:HttpGet("https://pastebin.com/raw/LdwPiyV2"))() end},
 }
 
