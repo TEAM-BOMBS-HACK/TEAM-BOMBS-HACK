@@ -123,7 +123,7 @@ local scriptsList = {
     {Name="سحب ادوات ", Callback=function() loadstring(game:HttpGet('https://pastebin.com/raw/xisndMix'))() end},
     {Name="ادمن", Callback=function() loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))() end},
     {Name="RC7", Callback=function() loadstring(game:HttpGet('https://pastebin.com/raw/iRe4j9iz'))() end},
-    {Name="ماب القنبله", Callback=function() loadstring(game:HttpGet(''))() end},
+    {Name="ماب القنبله", Callback=function() loadstring(game:HttpGet('https://pastebin.com/raw/ddfdhYXQ'))() end},
     {Name="سرعه", Callback=function() loadstring(game:HttpGet("https://pastebin.com/raw/WPnVHAtc"))() end},
     {Name="مشخل سكربت", Callback=function() loadstring(game:HttpGet('https://pastebin.com/raw/Cx7f4KuC'))() end},
     {Name="نسخ", Callback=function() loadstring(game:HttpGet('https://pastebin.com/raw/SnBYMp1n'))() end},
